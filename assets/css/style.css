@@ -1,0 +1,6 @@
+.background {
+    background: #2586b0;
+    background: linear-gradient(0deg, rgba(37, 134, 176, 1) 0%, rgba(59, 79, 59, 1) 100%);
+    background-size: cover;
+    background-position: center center;
+}

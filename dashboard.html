@@ -7,6 +7,7 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/img/i-logo.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -65,15 +66,89 @@
 
         <div class="container-fluid">
             <div class="row">
+
+                <!--NAVBAR DA MOBILE-->
+                <nav class="navbar navbar-dark bg-dark d-md-none fixed-top shadow-sm">
+                    <!--PULSANTE NAVBAR DA MOBILE-->
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Dashboard</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasSidebar"
+                        aria-labelledby="offcanvasSidebarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Menu Epicode</h5>
+                            <button type="button" class="btn-close text-reset btn-close-white"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column pt-0">
+                            <ul class="nav flex-column mb-auto">
+                                <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" class="w-75 mx-auto mb-3">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="./index.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                        </svg> Home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="./dashboard.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
+                                            <path
+                                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
+                                            <path
+                                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
+                                        </svg> Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="nav-link text-white" data-bs-toggle="modal"
+                                        data-bs-target="#addProductModal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                        </svg> Aggiungi Prodotti
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- NAVBAR -->
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse min-vh-100">
                     <div class="position-sticky pt-3">
 
                         <ul class="nav flex-column">
                             <img src="./assets/img/epicode_logo.png" alt="" class="w-50 m-auto mb-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./dashboard.html">
+                                <a class="nav-link text-white" href="./index.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                                        class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="./dashboard.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
                                         <path
                                             d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
                                         <path
@@ -86,10 +161,10 @@
                             </li>
                             <!-- Button ADD PRODUCT trigger modal -->
                             <li class="nav-item">
-                                <button type="button" class="nav-link" data-bs-toggle="modal"
+                                <button type="button" class="nav-link text-white" data-bs-toggle="modal"
                                     data-bs-target="#addProductModal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        class="bi bi-clipboard-data me-2" viewBox="0 0 16 16">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
@@ -97,21 +172,11 @@
                                     Aggiungi Prodotti
                                 </button>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./index.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-house" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                                    </svg>
-                                    Home
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
 
-                <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5">
 
                     <div
                         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -124,10 +189,15 @@
                                 <div class="card h-100 text-center shadow">
                                     <div class="card-body">
                                         <div class="display-4 text-primary mb-2">
-                                            <i class="bi bi-people"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                fill="currentColor" class="bi bi-database text-black"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525" />
+                                            </svg>
                                         </div>
                                         <h2 class="card-title mb-3" id="total-product">0</h2>
-                                        <p class="card-text text-muted">Totale Prodotti</p>
+                                        <p class="card-text text-muted mb-3">Totale Prodotti</p>
                                     </div>
                                 </div>
                             </div>

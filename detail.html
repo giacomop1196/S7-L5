@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title id="page-title">Dettagli</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/img/i-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" id="favicon" href="./assets/img/i-logo.png" type="image/x-icon" />
 </head>
 
 <body class="background min-vh-100">
@@ -45,25 +45,36 @@
     </header>
     <!--MAIN-->
     <main>
-        <div class="container mt-1">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
-                <!--LOGO GENERATO CON IA-->
-                <img src="./assets/img/Logo.png" alt="logo">
-            </div>
-        </div>
         <!--CARD CONTAINER-->
-        <div class="container mb-5">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center"
-                id="card-container">
-                <!--CARD-->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- PRODUCT IMAGE  -->
+                <div class="col-md-6 mb-4">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
+                        alt="Product" class="img-fluid rounded mb-3 product-image" style="height: 550px;"
+                        id="product-img">
+                </div>
+                <!-- PRODUCT DETAILS -->
+                <div class="col-md-6">
+                    <h2 class="mb-3 text-white" id="name">Titolo</h2>
+                    <p class="mb-3 text-white" id="product-brand">xxx</p>
+                    <p class="text-white-50 mb-4" id="product-id">ID: xxxxx</p>
+                    <div class="mb-3">
+                        <span class="h4 me-2 text-white" id="price">€</span>
+                    </div>
+                    <p class="mb-4 text-white" id="description">xxxxxxxx</p>
+                    <!-- PULSANTE FINTO -->
+                    <button class="btn btn-primary btn-lg me-2">
+                        <i class="bi bi-cart-plus"></i> Aggiungi al carrello
+                    </button>
+                </div>
             </div>
         </div>
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/detail.js"></script>
 </body>
 
 </html>
