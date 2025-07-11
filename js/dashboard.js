@@ -46,6 +46,7 @@ addProductForm.addEventListener('submit', (e) => {
             if (res.ok) {
                 addProductForm.reset() //Resetto il form
                 productList.innerHTML = '' //Svuoto il contenuto della tabella
+                alert('Prodotto aggiunto con successo!');
                 getProducts() //Rilancio la funzione e ripopolo la tabella
             } else {
                 throw new Error('Errore nella request', res.status)
