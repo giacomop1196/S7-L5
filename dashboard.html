@@ -31,8 +31,7 @@
                             <!--DESCRIZIONE PRODOTTO-->
                             <div class="mb-3">
                                 <label for="description" class="form-label">Descrizione Prodotto</label>
-                                <input required type="text" class="form-control" id="description"
-                                    aria-describedby="emailHelp">
+                                <textarea required class="form-control" id="description" rows="3"></textarea>
                             </div>
                             <!--MARCA PRODOTTO-->
                             <div class="mb-3">
@@ -52,10 +51,12 @@
                                 <input required type="number" class="form-control" id="price"
                                     aria-describedby="emailHelp">
                             </div>
-
-                            <!--PULSANTE SALVA PRODOTTO-->
+                            <!--PULSANTE CHIUDI MODALE-->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                            <button type="submit" class="btn btn-primary m-4">Salva</button>
+                            <!--PULSANTE RESETTA FORM-->
+                            <button type="reset" class="btn btn-warning me-2">Resetta</button>
+                            <!--PULSANTE SALVA PRODOTTO-->
+                            <button type="submit" class="btn btn-primary">Salva</button>
                         </form>
                     </div>
                 </div>
